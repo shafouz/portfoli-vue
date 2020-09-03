@@ -1,9 +1,11 @@
 <template>
 	<div class="container-fluid"> 
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-md-3 position-fixed">
 				<vertical-sidebar></vertical-sidebar>
 			</div>
+      <div class="col-md-3">
+      </div>
 			<div class="col-md-9">
 				<main-content></main-content>
 			</div>
@@ -22,10 +24,16 @@ export default {
 <style>
 .container-fluid {
 	padding: 0 !important;
-	overflow: hidden;
 	height: 100vh;
 }
+.row {
+  margin: 0 !important;
+}
+.position-fixed {
+  padding: 0px !important;
+}
 .col-md-9 {
+  margin-left: 25vw !important;
   padding: 0px !important;
 }
 </style>

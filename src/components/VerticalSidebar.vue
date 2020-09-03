@@ -16,22 +16,6 @@
         </li>
       </ul>
     </nav>
-    <div class="fa-icons">
-      <div class="row mx-md-3">
-        <div class="col-md-6 ">
-          <font-awesome-layers class="fa-stack fa-fw fa-3x" @click="redirect('https://github.com/shafouz')" alt="github link">
-            <font-awesome-icon icon="circle" :style="{color: 'grey'}" />
-              <font-awesome-icon class="icon" :icon="['fab', 'github']" />
-          </font-awesome-layers>
-        </div>
-        <div class="col-md-6 ">
-          <font-awesome-layers class="fa-stack fa-fw fa-3x" @click="redirect('https://twitter.com/Shafouz')" alt="twitter link">
-            <font-awesome-icon icon="circle" :style="{color: 'grey'}" />
-              <font-awesome-icon class="icon" :icon="['fab', 'twitter']" />
-          </font-awesome-layers>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -55,7 +39,6 @@ export default {
 <style>
 .sidebar { height: 100vh !important; }
 .navbar { height: 80vh !important; }
-.fa-lg:hover { cursor: pointer; }
 .list-icon { vertical-align: sub; margin: 0 10px 0 0; }
 .nav-item { display: block ruby; }
 </style>
