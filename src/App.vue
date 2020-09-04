@@ -38,10 +38,10 @@ body {
 .container-fluid {
   padding: 0 !important;
   height: 100vh;
-  background: url("./assets/ground.png"), url("./assets/sky.png"); 
-  background-repeat: repeat-x;
-  background-size: 10%, cover;
-  background-position: bottom, top;
+  background: url("./assets/ground-no-tree.png"), url("./assets/ground.png"), url("./assets/sky.png"); 
+  background-repeat: repeat-x, no-repeat, repeat-x;
+  background-size: 10%, 10%, cover;
+  background-position: bottom, bottom right, top;
 }
 .row {
   margin: 0 !important;
