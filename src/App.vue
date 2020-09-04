@@ -16,6 +16,8 @@
         <main-content></main-content>
       </div>
     </div>
+    <footer class="bg-bottom footer">
+    </footer>
   </div>
 </template>
 
@@ -36,6 +38,10 @@ body {
 .container-fluid {
   padding: 0 !important;
   height: 100vh;
+  background: url("./assets/ground.png"), url("./assets/sky.png"); 
+  background-repeat: repeat-x;
+  background-size: 10%, cover;
+  background-position: bottom, top;
 }
 .row {
   margin: 0 !important;
@@ -45,6 +51,9 @@ body {
 }
 .col-md-11, .col-md-1 {
   padding: 0px !important;
+}
+.col-md-11 {
+  background-image: url("./assets/woodbg.png") !important;
 }
 .col-md-1 {
   background-image: url("./assets/block2.png");
