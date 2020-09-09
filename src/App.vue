@@ -1,17 +1,11 @@
 <template>
   <div class="container-fluid"> 
+    <navbar-top></navbar-top>
     <div class="row">
-      <div class="col-md-3 position-fixed">
-        <div class="row">
-          <div class="col-md-11">
-            <vertical-sidebar></vertical-sidebar>
-          </div>
-          <div class="col-md-1">
-          </div>
-        </div>
+      <div class="position-fixed">
+        <vertical-sidebar></vertical-sidebar>
       </div>
-      <div class="col-md-3">
-      </div>
+      <div class="col-md-3"></div>
       <div class="col-md-9">
         <main-content></main-content>
       </div>
@@ -24,43 +18,43 @@
 <script>
 import MainContent from './components/MainContent.vue'
 import VerticalSidebar from './components/VerticalSidebar.vue'
+import NavbarTop from './components/NavbarTop.vue'
 export default {
-  components: { VerticalSidebar, MainContent }
+  components: { VerticalSidebar, MainContent, NavbarTop }
 }
 </script>
 
 <style>
 @font-face { font-family: Connection; src: url('./assets/ConnectionIi-2wj8.otf'); }
-
+@media only screen and (max-device-width : 1200px) {
+  .position-fixed, .col-md-3 {
+    display: none !important;
+  }
+  .navbar-top {
+    display: flex !important; 
+  }
+}
+html { 
+  scroll-behavior: smooth;
+}
 body { 
   font-family: Connection, sans-serif !important;
+  size: 1rem;
 }
 .container-fluid {
   padding: 0 !important;
   height: 100vh;
-  background: url("./assets/ground-no-tree.png"), url("./assets/ground.png"), url("./assets/sky.png"); 
-  background-repeat: repeat-x, no-repeat, repeat-x;
-  background-size: 10%, 10%, cover;
-  background-position: bottom, bottom right, top;
 }
 .row {
   margin: 0 !important;
 }
 .position-fixed {
-  padding: 0px !important;
-}
-.col-md-11, .col-md-1 {
-  padding: 0px !important;
-}
-.col-md-11 {
-  background-image: url("./assets/woodbg.png") !important;
-}
-.col-md-1 {
-  background-image: url("./assets/block2.png");
-  background-repeat: repeat-y;
+  z-index: 1030;
+  background-color: black;
+  width: 25vw;
 }
 .col-md-9 {
-  margin-left: 25vw !important;
   padding: 0px !important;
+  margin: auto !important;
 }
 </style>

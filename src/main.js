@@ -16,13 +16,15 @@ Vue.component('font-awesome-layers', FontAwesomeLayers)
 Vue.config.productionTip = false
 
 // Bootstrap stuff
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import { BootstrapVue, IconsPlugin, DropdownPlugin, CarouselPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
-//
+Vue.use(DropdownPlugin)
+Vue.use(CarouselPlugin)
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
