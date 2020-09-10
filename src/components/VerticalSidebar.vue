@@ -1,19 +1,19 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar" @scroll.passive="handleScroll">
     <div class="portrait">
       <b-img v-bind="mainProps" rounded="circle"></b-img>
     </div>
     <nav class="navbar">
       <ul>
-        <li class="nav-item active" @mouseover="setHide(1)">
+        <li class="nav-item active" @mouseover="setHide(1)" @scrolltrigger="setHide(1)">
           <img src="../assets/cursor.png" v-if="hide == 1">
           <a class="nav-link" href="#portfolio">My portfolio</a>
         </li>
-        <li class="nav-item active" @mouseover="setHide(2)">
+        <li class="nav-item active" @mouseover="setHide(2)" @scrolltrigger="setHide(2)">
           <img src="../assets/cursor.png" v-if="hide == 2">
           <a class="nav-link" href="#resumee">Projects</a>
         </li>
-        <li class="nav-item active" @mouseover="setHide(3)">
+        <li class="nav-item active" @mouseover="setHide(3)" @scrolltrigger="setHide(3)">
           <img src="../assets/cursor.png" v-if="hide == 3">
           <a class="nav-link" href="#about">About me</a>
         </li>
@@ -28,7 +28,8 @@ export default {
   data() { 
     return {
       hide: 1,
-      mainProps: { blank: true, blankColor: '#777', width: 150, height: 150, class: 'm1' }
+      mainProps: { blank: true, blankColor: '#777', width: 150, height: 150, class: 'm1' },
+      windowY: null,
     }
   },
   methods: {
@@ -37,7 +38,19 @@ export default {
     },
     setHide(num){
       this.hide = num
+    },
+    handleScroll(){
+console.log(window.scrollY)
+      if (window.scrollY < 1650) { this.hide = 1 } else
+        if (window.scrollY >= 1650 && window.scrollY < 2500) { this.hide = 2 }
+      else { this.hide = 3 }
     }
+  }, 
+  created () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 }
 </script>

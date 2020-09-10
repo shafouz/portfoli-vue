@@ -1,5 +1,5 @@
 <template>
-  <div class="main-content">
+  <div class="main-content" >
     <span class="anchor" id="portfolio"></span>
     <section>
       <project-gallery imageName="mtg-store.png" title="MTG Cards Store" />
@@ -11,7 +11,7 @@
       <resumee />
     </section>
     <span class="anchor" id="about"></span>
-    <section>
+    <section @scroll.passive="onScroll">
       <about-me />
     </section>
   </div>
@@ -30,10 +30,18 @@ export default {
     AboutMe
   },
 
+  data(){
+    return {
+    }
+  },
+
   methods: {
     redirect(url){
       window.location=url;
-    },
+    },  
+    onScroll(){
+      console.log("adjwqdoiqwjdiowqdjqoiwd");
+    }
   }
 }
 </script>
