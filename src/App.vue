@@ -33,6 +33,13 @@ export default {
   .navbar-top {
     display: flex !important; 
   }
+  .main-content {
+    margin-top: 4rem;
+  }
+  .img-container {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
 }
 html { 
   scroll-behavior: smooth;
@@ -50,7 +57,7 @@ body {
 }
 .position-fixed {
   z-index: 1030;
-  background-color: black;
+  background-color: #adace5;
   width: 25vw;
 }
 .col-md-9 {

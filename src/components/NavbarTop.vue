@@ -1,5 +1,6 @@
 <template>
   <nav class="navbar navbar-dark fixed-top bg-primary navbar-top" v-show="false">
+  <div class="container">
     <a class="navbar-brand">
       <span>Joao Luca</span>
     </a>
@@ -10,6 +11,7 @@
         <b-dropdown-item href="#about">About me</b-dropdown-item>
       </b-dropdown>
     </div>
+  </div>
   </nav>
 </template>
 
@@ -23,6 +25,6 @@ export default {
 .navbar-top {
   display: none;
   padding: 0rem 2rem !important;
-  background-color: black !important;
+  background-color: #adace5 !important;
 }
 </style>

@@ -42,7 +42,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 a { 
   color: white !important; 
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
@@ -51,18 +51,19 @@ a:hover {
   color: white !important;
 }
 .sidebar { 
+  text-align: center;
   height: 100vh !important; 
   padding: 1.25rem;
   margin: 0.625rem;
 }
 .portrait {
-  text-align: center;
   padding: 0.625rem;
   margin: 0.625rem;
   margin-bottom: 2rem;
 }
 .nav-item { 
   display: block ruby; 
+  text-align: start;
 }
 ul {
   list-style-type: none !important;

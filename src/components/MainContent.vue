@@ -2,7 +2,9 @@
   <div class="main-content">
     <span class="anchor" id="portfolio"></span>
     <section>
-      <carousel />
+      <project-gallery imageName="mtg-store.png" title="MTG Cards Store" />
+      <project-gallery imageName="trello-clone.png" title="Trello Clone" />
+      <project-gallery imageName="twitch-bot.png" title="Twitch.tv chatbot" />
     </section>
     <span class="anchor" id="resumee"></span>
     <section>
@@ -14,11 +16,11 @@
 </template>
 
 <script>
-import Carousel from './Carousel.vue'
+import ProjectGallery from './ProjectGallery.vue'
 export default {
   name: "main-content",
 
-  components: { Carousel },
+  components: { ProjectGallery },
 
   methods: {
     redirect(url){
@@ -29,9 +31,8 @@ export default {
 </script>
 
 <style scoped>
-.main-content {
-  margin-top: 3.3rem;
+.anchor:target {
+  padding-top: 3.3rem;
 }
-.anchor:target {padding-top: 3.3rem;}
 </style>
 
