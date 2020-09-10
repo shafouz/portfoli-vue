@@ -3,24 +3,32 @@
     <span class="anchor" id="portfolio"></span>
     <section>
       <project-gallery imageName="mtg-store.png" title="MTG Cards Store" />
-      <project-gallery imageName="trello-clone.png" title="Trello Clone" />
-      <project-gallery imageName="twitch-bot.png" title="Twitch.tv chatbot" />
+        <project-gallery imageName="trello-clone.png" title="Trello Clone" />
+          <project-gallery imageName="twitch-bot.png" title="Twitch.tv chatbot" />
     </section>
     <span class="anchor" id="resumee"></span>
     <section>
+      <resumee />
     </section>
     <span class="anchor" id="about"></span>
     <section>
+      <about-me />
     </section>
-      </div>
+  </div>
 </template>
 
 <script>
 import ProjectGallery from './ProjectGallery.vue'
+import Resumee from './Resumee.vue'
+import AboutMe from './AboutMe.vue'
 export default {
   name: "main-content",
 
-  components: { ProjectGallery },
+  components: { 
+    ProjectGallery,
+    Resumee,
+    AboutMe
+  },
 
   methods: {
     redirect(url){

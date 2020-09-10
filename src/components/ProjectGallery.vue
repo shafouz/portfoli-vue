@@ -34,9 +34,6 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  padding: 1rem;
-}
 .col-1 { 
   background: none;
 }
@@ -48,8 +45,8 @@ export default {
   cursor: pointer;
 }
 .row { 
-  margin: 15px !important;
-  padding: 15px !important;
+  margin: 0.625rem !important;
+  padding: 0.625rem !important;
 }
 .icon { 
   font-size: 2rem;
@@ -61,6 +58,6 @@ img {
 .img-container {
   margin: auto;
   max-width: 90%;
-  padding: 1rem 3rem;
+  padding: 0 3rem;
 }
 </style>

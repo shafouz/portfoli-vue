@@ -52,6 +52,9 @@ body {
   padding: 0 !important;
   height: 100vh;
 }
+.container {
+  padding: 1rem;
+}
 .row {
   margin: 0 !important;
 }
