@@ -1,19 +1,19 @@
 <template>
-  <div class="sidebar" @scroll.passive="handleScroll">
+  <div class="sidebar">
     <div class="portrait">
-      <b-img v-bind="mainProps" rounded="circle"></b-img>
+      <b-img rounded="circle" v-bind="mainProps"></b-img>
     </div>
     <nav class="navbar">
       <ul>
-        <li class="nav-item active" @mouseover="setHide(1)" @scrolltrigger="setHide(1)">
+        <li class="nav-item active" @mouseover="setHide(1)">
           <img src="../assets/cursor.png" v-if="hide == 1">
           <a class="nav-link" href="#portfolio">My portfolio</a>
         </li>
-        <li class="nav-item active" @mouseover="setHide(2)" @scrolltrigger="setHide(2)">
+        <li class="nav-item active" @mouseover="setHide(2)">
           <img src="../assets/cursor.png" v-if="hide == 2">
           <a class="nav-link" href="#resumee">Projects</a>
         </li>
-        <li class="nav-item active" @mouseover="setHide(3)" @scrolltrigger="setHide(3)">
+        <li class="nav-item active" @mouseover="setHide(3)">
           <img src="../assets/cursor.png" v-if="hide == 3">
           <a class="nav-link" href="#about">About me</a>
         </li>
@@ -28,7 +28,7 @@ export default {
   data() { 
     return {
       hide: 1,
-      mainProps: { blank: true, blankColor: '#777', width: 150, height: 150, class: 'm1' },
+      mainProps: { width: 170, height: 170, class: 'm1', src: "pluto.jpg" },
       windowY: null,
     }
   },
@@ -40,9 +40,8 @@ export default {
       this.hide = num
     },
     handleScroll(){
-console.log(window.scrollY)
-      if (window.scrollY < 1650) { this.hide = 1 } else
-        if (window.scrollY >= 1650 && window.scrollY < 2500) { this.hide = 2 }
+      if (window.scrollY < 1500) { this.hide = 1 } else
+        if (window.scrollY >= 1500 && window.scrollY < 2500) { this.hide = 2 }
       else { this.hide = 3 }
     }
   }, 

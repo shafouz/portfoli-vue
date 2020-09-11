@@ -7,13 +7,13 @@
     <div class="row">
       <div class="col-1" />
       <div class="col-auto">
-        <font-awesome-layers class="fa-stack fa-fw fa-3x" @click="redirect('https://github.com/Shafouz')" alt="twitter link">
+        <font-awesome-layers class="fa-stack fa-fw fa-3x" @click="redirect(`${github}`)" alt="twitter link">
           <font-awesome-icon class="icon-background" icon="circle" :style="{color: 'grey'}" />
             <font-awesome-icon class="icon" :icon="['fab', 'github']" />
         </font-awesome-layers>
       </div>
       <div class="col-auto">
-        <font-awesome-layers class="fa-stack fa-fw fa-3x" @click="redirect('https://twitter.com/Shafouz')" alt="twitter link">
+        <font-awesome-layers class="fa-stack fa-fw fa-3x" @click="redirect(`${demo}`)" alt="twitter link" v-if="!hideDemo">
           <font-awesome-icon class="icon-background" icon="circle" :style="{color: 'grey'}" />
             <font-awesome-icon class="icon" :icon="['fas', 'globe']" />
         </font-awesome-layers>
@@ -28,7 +28,10 @@ export default {
   name: "project-gallery",
   props: { 
     imageName: String,
-    title: String
+    title: String,
+    github: String,
+    demo: String,
+    hideDemo: Boolean
   },
 }
 </script>
