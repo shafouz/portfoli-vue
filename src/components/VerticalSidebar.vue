@@ -7,7 +7,7 @@
       <ul>
         <li class="nav-item active" @mouseover="setHide(1)">
           <img src="../assets/cursor.png" v-if="hide == 1">
-          <a class="nav-link" href="#portfolio">Testing stuff</a>
+          <a class="nav-link" href="#portfolio">My portfolio</a>
         </li>
         <li class="nav-item active" @mouseover="setHide(2)">
           <img src="../assets/cursor.png" v-if="hide == 2">
