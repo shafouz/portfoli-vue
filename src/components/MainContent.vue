@@ -4,7 +4,7 @@
     <section>
       <project-gallery imageName="mtg-store.png" title="MTG Cards Store" github="https://github.com/shafouz/mtg-cards-store" demo="http://mtg-cards-store.herokuapp.com/" />
         <project-gallery imageName="trello-clone.png" title="Trello Clone" github="https://github.com/shafouz/portfolio-vue" demo="http://portfolio-joaoluca.herokuapp.com/" />
-          <project-gallery imageName="twitch-bot.jpg" title="Twitch.tv chatbot" github="https://github.com/shafouz/twitch-bot" hideDemo="true" />
+          <project-gallery imageName="twitch-bot.png" title="Twitch.tv chatbot" github="https://github.com/shafouz/twitch-bot" hideDemo="true" />
     </section>
     <span class="anchor" id="resumee"></span>
     <section>
@@ -29,17 +29,6 @@ export default {
     Resumee,
     AboutMe
   },
-
-  data(){
-    return {
-    }
-  },
-
-  methods: {
-    redirect(url){
-      window.location=url;
-    },  
-  }
 }
 </script>
 

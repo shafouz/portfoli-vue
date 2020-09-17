@@ -33,6 +33,11 @@ export default {
     demo: String,
     hideDemo: Boolean
   },
+  methods: {
+    redirect(url){
+      window.location=url;
+    },  
+  }
 }
 </script>
 
